@@ -66,7 +66,7 @@ The example image is in the ./example/232932 and results will be saved in ./exam
 
 ![](./teaser/res_232932.png)
 
-For left to right are the input segmented real image, the optimized smpl, the reconstructed canonical mesh and reposed mesh by NN skinning weight.  Note the results are somewhat overfitting due to small training set. 
+From left to right are the input segmented real image, the optimized smpl, the reconstructed canonical mesh and reposed mesh by NN skinning weight.  Note the results are somewhat overfitting due to small training set. 
 
 ## Citation
 
