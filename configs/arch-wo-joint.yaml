@@ -1,0 +1,31 @@
+name: arch-wo-joint
+gpus: [1]
+test_gpus: [1]
+test_mode: True
+batch_size: 1
+overfit: False
+smpl_dir: './data/smpl_related/models'
+obj_dir: '/media/liaotingting/usb2/projects/MVPHuman/MVPHumanTrain'
+syn_dir: '/media/liaotingting/usb2/projects/ARCH/data/mvphuman'
+sample_dir: '/media/liaotingting/usb2/projects/ARCH/data/mvphuman_samples'
+schedule: [50000]
+max_n_iter: 100000
+net:
+  mlp_dim: [131, 512, 256, 128, 1]
+  res_layers: [2,3,4]
+  num_stack: 2
+  gtype: 'HGPIFuNet'
+  norm_mlp: 'batch'
+  hourglass_dim: 128
+  skip_hourglass: False
+  num_joint: 0
+dataset:
+  name: mvphuman
+  aug: False
+  random_flip: False
+  random_scale: False
+  random_trans: False
+
+# user defined
+mcube_res: 256    # occupancy field resolution, higher --> more details
+clean_mesh: True # if True, will remove floating pieces
