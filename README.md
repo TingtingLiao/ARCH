@@ -30,9 +30,11 @@ MVPHuman provides animateble meshes in canonical pose with corresponding skinnin
 ![](./teaser/render_example.png)
 
 **0. Download motion sequence from [AIST++](https://google.github.io/aistplusplus_dataset/)**
+
 Put them into ./data/motion/
 
 **1. Generate Data**
+
 Change the default path in lib/common/config.py. **obj_dir** is the obj folder and **syn_dir** is where synthetic data are saved. 
 ```sh
 $ mv subject_list.txt ./data/mvphuman 
