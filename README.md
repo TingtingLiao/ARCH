@@ -55,7 +55,7 @@ $ bash sample_points.sh gen subject_list
 
 ## Inference 
 
-ARCH is highly dependent on the smpl results estimated  from input images. The results would be bad if the estimated smpl is inaccurate, especially for in the wild images. Inspired by [ICON](https://icon.is.tue.mpg.de/), this code incorporates the smpl optimizing process after HPS during inference.   
+ARCH is highly dependent on smpl results estimated from input images. It works not well if the estimated smpl is inaccurate, especially for large poses. Inspired by [ICON](https://icon.is.tue.mpg.de/), this code incorporates the smpl optimizing process after HPS during inference.   
 
 ```sh 
 $ python -m apps.infer -cfg configs/arch-wo-joint.yaml
