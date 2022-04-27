@@ -24,9 +24,11 @@ _C.name = 'default'
 _C.gpus = [0]
 _C.test_gpus = [0]
 _C.root = "../data/"
-_C.obj_dir = ''
-_C.syn_dir = ''
-_C.smpl_dir = './data/smpl_related/models'
+
+smpl_dir = './data/smpl_related/models'
+obj_dir = '/media/liaotingting/usb2/projects/MVPHuman/MVPHumanTrain'
+syn_dir = '../data/mvphuman'
+sample_dir = '../data/mvphuman_samples'
 _C.ckpt_dir = './results/ckpt/'
 _C.results_dir = './results/vis/'
 _C.log_dir = './results/logs'

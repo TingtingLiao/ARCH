@@ -39,7 +39,6 @@ if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--subject', type=str, help='subject name')
-    parser.add_argument('-c', '--config', type=str, default="../configs/arch.yaml")
     args = parser.parse_args()
 
     cfg.merge_from_file(args.config)

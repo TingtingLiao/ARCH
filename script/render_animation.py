@@ -26,12 +26,9 @@ t0 = time.time()
 parser = argparse.ArgumentParser()
 parser.add_argument('-s', '--subject', type=str, help='subject name')
 parser.add_argument('-r', '--rotation', type=str, help='rotation num')
-parser.add_argument('-c', '--config', type=str, default="../configs/arch.yaml")
 args = parser.parse_args()
 
-cfg.merge_from_file(args.config)
 cfg.freeze()
-
 
 subject = args.subject
 rotation = int(args.rotation)
@@ -58,9 +55,8 @@ vertices, faces, textures, face_textures = load_obj_mesh(canon_file, with_textur
 
 if animation:
     # get human motion data
-    smpl_model = smpl.create('.'+cfg.smpl_dir)
-    # motion_file = random.choice(os.path.join(cfg.po_dir, '*.pkl'))
-    motion_file = '/media/liaotingting/usb/tmp/MotionData/motion/gLO_sBM_cAll_d14_mLO1_ch05.pkl'
+    smpl_model = smpl.create('../data/smpl_related/models')
+    motion_file = random.choice('../data/smpl_related/motion/*.pkl')
     motion_data = pkl.load(open(motion_file, 'rb'))
     pose = motion_data['smpl_poses'].reshape(-1, 24, 3)
     pose = torch.from_numpy(random.choice(pose)).float()

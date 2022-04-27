@@ -30,24 +30,24 @@ MVPHuman provides animateble meshes in canonical pose with corresponding skinnin
 ![](./teaser/render_example.png)
 
 **0. Download motion sequence from [AIST++](https://google.github.io/aistplusplus_dataset/)**
+Put them into ./data/motion/
 
 **1. Generate Data**
-
+Change the default path in lib/common/config.py. **obj_dir** is the obj folder and **syn_dir** is where synthetic data are saved. 
 ```sh
 $ mv subject_list.txt ./data/mvphuman 
 $ cd script
 $ bash render.sh gen subject_list
 ```
-The results will be save to ./data/mvphuman. You can change **syn_dir** in configs/arch.yaml to any directory you want.   
+ 
+**2. Sampling  Data Offline** 
 
-**2. Sampling  Data Off-line** 
-
-It is really time consuming to load the provided obj files. For faster training, we recommend you to sample the points and query the corresponding skinning weights off-line by:       
+It is really time consuming to load the provided obj files. For faster training, we recommend you to sample the points and query the corresponding skinning weights offline by:       
 
 ```sh  
 $ bash sample_points.sh gen subject_list
 ```
-​    The results will be save to ./data/mvphuman_samples. You can change **sample_dir** in configs/arch.yaml to any directory you want. 
+​    The results will be save to ./data/mvphuman_samples in default. You can change **sample_dir** in lib/common/config.py to your own folder. 
 
 ## Training 
 
@@ -68,5 +68,10 @@ The example image is in the ./example/232932 and results will be saved in ./exam
 
 From left to right are the input segmented real image, the optimized smpl, the reconstructed canonical mesh and reposed mesh by NN skinning weight.  Note the results are somewhat overfitting due to small training set. 
 
-## Citation
-
+## Related Work 
+**[ARCH:Animatable Reconstruction of Clothed Humans](https://arxiv.org/abs/2004.04572)** <br> 
+*Zeng Huang, Yuanlu Xu, Christoph Lassner, Hao Li, Tony Tung*
+ 
+**[ICON: Implicit Clothed humans Obtained from Normals](https://arxiv.org/abs/2112.09127)** <br> 
+*Yuliang Xiu,  Jinlong Yang,  Dimitrios Tzionas,  Michael J. Black*
+ 

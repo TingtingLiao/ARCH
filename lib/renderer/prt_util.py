@@ -118,7 +118,6 @@ def computePRT(vertices, faces, normals, n, order):
 
     w = 4.0 * math.pi / (n * n)
 
-    from lib.common.mesh_util import compute_normal
     origins = vertices
     n_v = origins.shape[0]
 
