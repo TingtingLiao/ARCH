@@ -1,0 +1,13 @@
+chumpy
+opencv-python
+numpy
+scipy
+smpl
+smplx
+termcolor
+tqdm
+# new version has no marching_cubes_lewiner
+scikit-image==0.18.0
+trimesh
+pytest-runner
+git+https://github.com/Project-Splinter/human_det
