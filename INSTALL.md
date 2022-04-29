@@ -1,16 +1,3 @@
-### 
-
-### Download PyMAF pretrained model
-```bash
-mkdir data/pymaf_data
-wget https://github.com/nkolot/GraphCMR/raw/master/data/mesh_downsampling.npz -O data/pymaf_data/mesh_downsampling.npz 
-```
-Download pretrained model `PyMAF_model_checkpoint.pt` at [here](https://drive.google.com/drive/folders/1R4_Vi4TpCQ26-6_b2PhjTBg-nBxZKjz6?usp=sharing).
-
-
-```bash
-```
-
 ## How to Install
 We organize the most needed packages in `requirements.txt`. However, for some error-prone packages, we describe step-by-step instructions below.
 ```bash
